@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Sukhvir Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Sukhvir Tools</a>
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="features.html" class="active">Features</a>
+                <a href="download.html">Download</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <h1>Features</h1>
+            <p>13 tools built for structural Revit workflows.</p>
+        </section>
+
+        <section class="content">
+            <div class="content-container">
+                <h2>Numbering Tools</h2>
+                <div class="tool-list">
+                    <div class="tool-card">
+                        <img src="icons/PileNumber.png" alt="Pile Number" class="tool-icon">
+                        <h3>Pile Number</h3>
+                        <p>Numbers selected piles in row order along a user-picked direction line. Detects vertically stacked piles and assigns sequential marks.</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="icons/ColumnNumber.png" alt="Column Number" class="tool-icon">
+                        <h3>Column Number</h3>
+                        <p>Renumber structural columns by tracing vertical stacks using footprint overlap detection. Sorts rows top-to-bottom, left-to-right, with floating columns appended at the end.</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="icons/WallNumber.png" alt="Wall Number" class="tool-icon">
+                        <h3>Wall Number</h3>
+                        <p>Renumber walls by grouping overlapping-footprint stacks. Orders horizontal stacks top-to-bottom, vertical stacks left-to-right, with A/B/C suffixes for split walls.</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="icons/ConcreteBeamNumber.png" alt="Concrete Beam Number" class="tool-icon">
+                        <h3>Concrete Beam Number</h3>
+                        <p>Numbers in-situ concrete beams in plan-view orientation. Horizontal beams are numbered top-row-first, left-to-right. Vertical beams are numbered left-column-first, bottom-to-top.</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="icons/SteelBeamNumber.png" alt="Steel Beam Number" class="tool-icon">
+                        <h3>Steel Beam Number</h3>
+                        <p>Same logic as Concrete Beam Number but filtered to hot-rolled steel members, using an "SB" prefix (e.g. SB1, SB2).</p>
+                    </div>
+                </div>
+
+                <h2>Splitting Tools</h2>
+                <div class="tool-list">
+                    <div class="tool-card">
+                        <img src="icons/ColumnSplit.png" alt="Column Split" class="tool-icon">
+                        <h3>Column Split</h3>
+                        <p>Splits selected structural columns at user-picked intermediate levels, creating new column segments per level with zero offsets and copying the original Mark.</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="icons/WallSplit.png" alt="Wall Split" class="tool-icon">
+                        <h3>Wall Split</h3>
+                        <p>Splits selected walls at user-picked intermediate levels, creating new wall segments per level with zero offsets. Supports curved walls and skips unconnected-height walls.</p>
+                    </div>
+                </div>
+
+                <h2>Coordination Tools</h2>
+                <div class="tool-list">
+                    <div class="tool-card">
+                        <img src="icons/JoinGeometry.png" alt="Join Geometry" class="tool-icon">
+                        <h3>Join Geometry</h3>
+                        <p>Pick two categories visible in the active view and join all overlapping element pairs between them. Includes optional priority-ranking to control which category cuts.</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="icons/ApplyCoping.png" alt="Apply Coping" class="tool-icon">
+                        <h3>Apply Coping</h3>
+                        <p>Finds structural members with bracing usage that physically intersect other framing, then applies cope cuts automatically.</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="icons/PileCoordinates.png" alt="Pile Coordinates" class="tool-icon">
+                        <h3>Pile Coordinates</h3>
+                        <p>Writes survey-point X, Y coordinates and pile cut-off elevation (in metres) to shared parameters on every pile family instance.</p>
+                    </div>
+                </div>
+
+                <h2>Documentation Tools</h2>
+                <div class="tool-list">
+                    <div class="tool-card">
+                        <img src="icons/CreateSheets.png" alt="Create Sheets" class="tool-icon">
+                        <h3>Create Sheets</h3>
+                        <p>Reads an Excel (.xlsx) file and bulk-creates Revit sheets, auto-creating shared project parameters for drawing category and series if missing.</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="icons/AssignViews.png" alt="Assign Views" class="tool-icon">
+                        <h3>Assign Views</h3>
+                        <p>Places one or more views onto selected sheets at a consistent position with typed mm offset or pick-to-place, including calibrated view-title offset workflow.</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="icons/AnnotationFixer.png" alt="Annotation Fixer" class="tool-icon">
+                        <h3>Annotation Fixer</h3>
+                        <p>Scans the active view for independent tags whose heads overlap model geometry or other tag heads, then nudges them to non-overlapping positions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">About</a>
+                <a href="features.html">Features</a>
+                <a href="download.html">Download</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 Sukhvir Tools. Built for Killa Design.</p>
+        </div>
+    </footer>
+</body>
+</html>
