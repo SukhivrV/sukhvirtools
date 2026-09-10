@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sukhvir Tools - Revit Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -22,41 +25,120 @@
 
     <main>
         <section class="hero">
-            <h1>StructiFlow</h1>
-            <p class="tagline">Eliminate repetitive modeling tasks, auto-number elements, and generate sheets in seconds&mdash;built specifically for structural BIM champs.</p>
+            <div class="hero-inner">
+                <span class="badge">Revit 2025 Add-in</span>
+                <h1>Structi<span class="gradient">Flow</span></h1>
+                <p class="tagline">Eliminate repetitive modeling tasks, auto-number elements, and generate sheets in seconds&mdash;built specifically for structural BIM champs.</p>
+                <div class="hero-actions">
+                    <a href="download.html" class="btn btn-primary">Download</a>
+                    <a href="features.html" class="btn btn-outline">Explore Features</a>
+                </div>
+            </div>
         </section>
 
-        <section class="content">
+        <section class="section">
             <div class="content-container">
-                <h2>The Problem</h2>
-                <p>Revit is powerful, but structural production work is full of repetitive, error-prone tasks - numbering piles, columns, beams, and walls, splitting elements at levels, joining geometry, and creating sheets from Excel. These tasks eat hours every week and slow teams down.</p>
+                <h2 class="section-title">See it in Revit</h2>
+                <p class="section-sub">A dedicated ribbon tab that puts your most-used structural tools one click away.</p>
+                <div class="ribbon-preview">
+                    <div class="ribbon-titlebar">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="title">Model - Structural.rvt &mdash; Autodesk Revit 2025</span>
+                    </div>
+                    <div class="ribbon-tabs">
+                        <span class="ribbon-tab">Structure</span>
+                        <span class="ribbon-tab active">Sukhvir Automation</span>
+                        <span class="ribbon-tab">Steel</span>
+                    </div>
+                    <div class="ribbon-panel">
+                        <span class="ribbon-panel-label">Sukhvir Tools</span>
+                        <div class="ribbon-buttons">
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/PileNumber.png" alt="">
+                                Pile Number
+                            </button>
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/ColumnNumber.png" alt="">
+                                Column Number
+                            </button>
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/WallNumber.png" alt="">
+                                Wall Number
+                            </button>
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/ColumnSplit.png" alt="">
+                                Column Split
+                            </button>
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/WallSplit.png" alt="">
+                                Wall Split
+                            </button>
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/JoinGeometry.png" alt="">
+                                Join Geometry
+                            </button>
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/ApplyCoping.png" alt="">
+                                Apply Coping
+                            </button>
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/CreateSheets.png" alt="">
+                                Create Sheets
+                            </button>
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/AssignViews.png" alt="">
+                                Assign Views
+                            </button>
+                            <button class="ribbon-btn" type="button">
+                                <img src="icons/AnnotationFixer.png" alt="">
+                                Annotation Fixer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <h2>The Solution</h2>
-                <p>Sukhvir Tools adds a dedicated ribbon tab to Revit with 13 tools designed for real structural workflows. No scripting. No Dynamo graphs. Just click and done.</p>
-
-                <h2>What It Does</h2>
+        <section class="section section-alt">
+            <div class="content-container">
+                <h2 class="section-title">Why StructiFlow?</h2>
+                <p class="section-sub">Revit is powerful, but structural production work is full of repetitive, error-prone tasks that eat hours every week. StructiFlow removes the busywork&mdash;no scripting, no Dynamo graphs, just click and done.</p>
 
                 <div class="feature-grid">
                     <div class="feature-card">
+                        <div class="feature-icon" data-lucide="hash"></div>
                         <h3>Automates Numbering</h3>
-                        <p>Number piles, columns, beams, and walls intelligently - detecting stacks, rows, and orientation to assign sequential marks automatically.</p>
+                        <p>Number piles, columns, beams, and walls intelligently&mdash;detecting stacks, rows, and orientation to assign sequential marks automatically.</p>
                     </div>
                     <div class="feature-card">
+                        <div class="feature-icon" data-lucide="scissors"></div>
                         <h3>Splits Elements</h3>
                         <p>Split columns and walls at any intermediate level with a single click, creating properly segmented elements with copied marks.</p>
                     </div>
                     <div class="feature-card">
+                        <div class="feature-icon" data-lucide="file-spreadsheet"></div>
                         <h3>Streamlines Documentation</h3>
-                        <p>Batch-create sheets from Excel, assign views to sheets, and fix annotation overlaps - all from the ribbon.</p>
+                        <p>Batch-create sheets from Excel, assign views to sheets, and fix annotation overlaps&mdash;all from the ribbon.</p>
                     </div>
                     <div class="feature-card">
+                        <div class="feature-icon" data-lucide="drafting-compass"></div>
                         <h3>Simplifies Coordination</h3>
                         <p>Join geometry between selected categories, apply steel coping automatically, and extract pile coordinates with ease.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <h2>Compatibility</h2>
-                <p>Sukhvir Tools supports <strong>Autodesk Revit 2025</strong>.</p>
+        <section class="section">
+            <div class="content-container" style="text-align:center">
+                <h2 class="section-title">Compatibility</h2>
+                <p class="section-sub">One installer. One tab. Ready to work in your production models today.</p>
+                <p><strong>Autodesk Revit 2025</strong> &middot; Windows 10/11 (64-bit) &middot; .NET 8.0</p>
+                <p style="margin-top:1.5rem">
+                    <a href="download.html" class="btn btn-primary" data-lucide="download">Download Installer</a>
+                </p>
             </div>
         </section>
     </main>
@@ -72,5 +154,8 @@
             <p>&copy; 2025 Sukhvir Tools.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features - Sukhvir Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,7 +30,10 @@
 
         <section class="content">
             <div class="content-container">
-                <h2>Numbering Tools</h2>
+                <h2 class="category-heading">
+                    <span class="cat-icon" data-lucide="hash"></span>
+                    Numbering Tools
+                </h2>
                 <div class="tool-list">
                     <div class="tool-card">
                         <img src="icons/PileNumber.png" alt="Pile Number" class="tool-icon">
@@ -56,7 +62,10 @@
                     </div>
                 </div>
 
-                <h2>Splitting Tools</h2>
+                <h2 class="category-heading">
+                    <span class="cat-icon" data-lucide="scissors"></span>
+                    Splitting Tools
+                </h2>
                 <div class="tool-list">
                     <div class="tool-card">
                         <img src="icons/ColumnSplit.png" alt="Column Split" class="tool-icon">
@@ -70,7 +79,10 @@
                     </div>
                 </div>
 
-                <h2>Coordination Tools</h2>
+                <h2 class="category-heading">
+                    <span class="cat-icon" data-lucide="drafting-compass"></span>
+                    Coordination Tools
+                </h2>
                 <div class="tool-list">
                     <div class="tool-card">
                         <img src="icons/JoinGeometry.png" alt="Join Geometry" class="tool-icon">
@@ -89,7 +101,10 @@
                     </div>
                 </div>
 
-                <h2>Documentation Tools</h2>
+                <h2 class="category-heading">
+                    <span class="cat-icon" data-lucide="file-spreadsheet"></span>
+                    Documentation Tools
+                </h2>
                 <div class="tool-list">
                     <div class="tool-card">
                         <img src="icons/CreateSheets.png" alt="Create Sheets" class="tool-icon">
@@ -122,5 +137,8 @@
             <p>&copy; 2025 Sukhvir Tools.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
