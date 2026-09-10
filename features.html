@@ -16,8 +16,8 @@
             <div class="nav-links">
                 <a href="index.html">About</a>
                 <a href="features.html" class="active">Features</a>
-                <a href="download.html">Download</a>
                 <a href="contact.html">Contact</a>
+                <a href="download.html" class="btn btn-primary nav-cta">Download</a>
             </div>
         </div>
     </nav>
@@ -39,26 +39,31 @@
                         <img src="icons/PileNumber.png" alt="Pile Number" class="tool-icon">
                         <h3>Pile Number</h3>
                         <p>Numbers selected piles in row order along a user-picked direction line. Detects vertically stacked piles and assigns sequential marks.</p>
+                        <span class="usecase"><strong>Use case</strong>Number 200 piles on a raft foundation in one pass, in row order along the direction of your choice.</span>
                     </div>
                     <div class="tool-card">
                         <img src="icons/ColumnNumber.png" alt="Column Number" class="tool-icon">
                         <h3>Column Number</h3>
                         <p>Renumber structural columns by tracing vertical stacks using footprint overlap detection. Sorts rows top-to-bottom, left-to-right, with floating columns appended at the end.</p>
+                        <span class="usecase"><strong>Use case</strong>Renumber every column on a 40-storey tower while keeping stacked columns consistently marked top-to-bottom.</span>
                     </div>
                     <div class="tool-card">
                         <img src="icons/WallNumber.png" alt="Wall Number" class="tool-icon">
                         <h3>Wall Number</h3>
                         <p>Renumber walls by grouping overlapping-footprint stacks. Orders horizontal stacks top-to-bottom, vertical stacks left-to-right, with A/B/C suffixes for split walls.</p>
+                        <span class="usecase"><strong>Use case</strong>Renumber basement core walls, grouping vertical stacked segments into a single logical mark.</span>
                     </div>
                     <div class="tool-card">
                         <img src="icons/ConcreteBeamNumber.png" alt="Concrete Beam Number" class="tool-icon">
                         <h3>Concrete Beam Number</h3>
                         <p>Numbers in-situ concrete beams in plan-view orientation. Horizontal beams are numbered top-row-first, left-to-right. Vertical beams are numbered left-column-first, bottom-to-top.</p>
+                        <span class="usecase"><strong>Use case</strong>Number all in-situ beams on a floor plate in plan orientation for clean, schedule-friendly marks.</span>
                     </div>
                     <div class="tool-card">
                         <img src="icons/SteelBeamNumber.png" alt="Steel Beam Number" class="tool-icon">
                         <h3>Steel Beam Number</h3>
                         <p>Same logic as Concrete Beam Number but filtered to hot-rolled steel members, using an "SB" prefix (e.g. SB1, SB2).</p>
+                        <span class="usecase"><strong>Use case</strong>Number steel framing on a warehouse grid with a distinct SB prefix so steel and concrete marks never clash.</span>
                     </div>
                 </div>
 
@@ -71,11 +76,13 @@
                         <img src="icons/ColumnSplit.png" alt="Column Split" class="tool-icon">
                         <h3>Column Split</h3>
                         <p>Splits selected structural columns at user-picked intermediate levels, creating new column segments per level with zero offsets and copying the original Mark.</p>
+                        <span class="usecase"><strong>Use case</strong>Split a double-height column at the slab level instantly, without rebuilding or re-tagging the elements.</span>
                     </div>
                     <div class="tool-card">
                         <img src="icons/WallSplit.png" alt="Wall Split" class="tool-icon">
                         <h3>Wall Split</h3>
                         <p>Splits selected walls at user-picked intermediate levels, creating new wall segments per level with zero offsets. Supports curved walls and skips unconnected-height walls.</p>
+                        <span class="usecase"><strong>Use case</strong>Split retaining and core walls at staged-pour levels, curved walls included, while preserving marks.</span>
                     </div>
                 </div>
 
@@ -88,16 +95,19 @@
                         <img src="icons/JoinGeometry.png" alt="Join Geometry" class="tool-icon">
                         <h3>Join Geometry</h3>
                         <p>Pick two categories visible in the active view and join all overlapping element pairs between them. Includes optional priority-ranking to control which category cuts.</p>
+                        <span class="usecase"><strong>Use case</strong>Make beams and columns cleanly join across an entire floor in one operation, with either category set as the cutter.</span>
                     </div>
                     <div class="tool-card">
                         <img src="icons/ApplyCoping.png" alt="Apply Coping" class="tool-icon">
                         <h3>Apply Coping</h3>
                         <p>Finds structural members with bracing usage that physically intersect other framing, then applies cope cuts automatically.</p>
+                        <span class="usecase"><strong>Use case</strong>Auto-cope brace members that intersect steel framing instead of manually cutting each connection.</span>
                     </div>
                     <div class="tool-card">
                         <img src="icons/PileCoordinates.png" alt="Pile Coordinates" class="tool-icon">
                         <h3>Pile Coordinates</h3>
                         <p>Writes survey-point X, Y coordinates and pile cut-off elevation (in metres) to shared parameters on every pile family instance.</p>
+                        <span class="usecase"><strong>Use case</strong>Push survey coordinates and cut-off levels onto every pile for schedules and setting-out in seconds.</span>
                     </div>
                 </div>
 
@@ -110,17 +120,26 @@
                         <img src="icons/CreateSheets.png" alt="Create Sheets" class="tool-icon">
                         <h3>Create Sheets</h3>
                         <p>Reads an Excel (.xlsx) file and bulk-creates Revit sheets, auto-creating shared project parameters for drawing category and series if missing.</p>
+                        <span class="usecase"><strong>Use case</strong>Generate a full 100-sheet project register from your Excel drawing list in seconds.</span>
                     </div>
                     <div class="tool-card">
                         <img src="icons/AssignViews.png" alt="Assign Views" class="tool-icon">
                         <h3>Assign Views</h3>
                         <p>Places one or more views onto selected sheets at a consistent position with typed mm offset or pick-to-place, including calibrated view-title offset workflow.</p>
+                        <span class="usecase"><strong>Use case</strong>Drop every plan view onto its matching sheet at a consistent position and title offset.</span>
                     </div>
                     <div class="tool-card">
                         <img src="icons/AnnotationFixer.png" alt="Annotation Fixer" class="tool-icon">
                         <h3>Annotation Fixer</h3>
                         <p>Scans the active view for independent tags whose heads overlap model geometry or other tag heads, then nudges them to non-overlapping positions.</p>
+                        <span class="usecase"><strong>Use case</strong>Clean up overlapping tags across floor plans in one click before issuing for tender.</span>
                     </div>
+                </div>
+
+                <div class="cta-box">
+                    <h2>Ready to speed up your structural workflows?</h2>
+                    <p>Install Sukhvir Tools for Revit 2025 and get all 13 tools working in minutes.</p>
+                    <a href="download.html" class="btn btn-primary" data-lucide="download">Get Started for Revit 2025</a>
                 </div>
             </div>
         </section>

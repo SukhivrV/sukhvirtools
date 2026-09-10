@@ -109,6 +109,11 @@ a:hover {
     text-decoration: none;
 }
 
+.nav-cta {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+}
+
 /* Hero */
 .hero {
     background: linear-gradient(160deg, var(--primary) 0%, var(--primary-soft) 60%, #0b1729 100%);
@@ -473,6 +478,25 @@ a:hover {
     object-fit: contain;
 }
 
+.usecase {
+    display: block;
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px dashed var(--border);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.usecase strong {
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 0.7rem;
+    display: block;
+    margin-bottom: 0.15rem;
+}
+
 .category-heading {
     display: inline-flex;
     align-items: center;
@@ -490,6 +514,35 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+/* CTA box */
+.cta-box {
+    background: linear-gradient(150deg, var(--primary), var(--primary-soft));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.cta-box h2 {
+    justify-content: center;
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem;
+}
+
+.cta-box p {
+    color: #cbd5e1;
+    max-width: 460px;
+    margin: 0 auto 1.5rem;
+}
+
+.cta-box .btn-primary {
+    font-size: 1.05rem;
+    padding: 0.9rem 2.25rem;
 }
 
 /* Download */
