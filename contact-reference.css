@@ -1,0 +1,183 @@
+/* Contact page styling matched to the supplied reference image. */
+
+.page-header {
+    padding-top: 3.8rem;
+    padding-bottom: 2.25rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: clamp(2.5rem, 4vw, 3.25rem);
+    line-height: 1.1;
+    margin-bottom: .8rem;
+    letter-spacing: -.035em;
+}
+
+.page-header p {
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-header .eyebrow {
+    display: none;
+}
+
+.contact-layout {
+    grid-template-columns: 1.2fr .8fr;
+    gap: 1.5rem;
+}
+
+.contact-info,
+.contact-side {
+    padding: 2.75rem;
+    min-height: 38rem;
+    border-color: #dbe7f7;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, .025);
+}
+
+.contact-brand {
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-brand img {
+    width: 4.75rem;
+    height: 4.75rem;
+    border-radius: 12px;
+}
+
+.contact-brand strong {
+    font-size: 1.35rem;
+    line-height: 1.25;
+}
+
+.contact-brand span {
+    font-size: 1rem;
+    margin-top: .2rem;
+}
+
+.contact-info h2,
+.contact-side h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -.025em;
+    margin-bottom: .85rem;
+}
+
+.contact-info > p {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 720px;
+}
+
+.contact-list {
+    margin-top: 1.75rem;
+    gap: 1.2rem;
+}
+
+.contact-list li {
+    gap: 1rem;
+}
+
+.contact-icon {
+    width: 4rem;
+    height: 4rem;
+    flex-basis: 4rem;
+    border-radius: 13px;
+    background: rgba(37, 99, 235, .11);
+}
+
+.contact-list strong {
+    font-size: .95rem;
+    margin-bottom: .15rem;
+}
+
+.contact-list a {
+    font-size: 1rem;
+}
+
+.contact-side {
+    justify-content: flex-start;
+}
+
+.contact-side .panel-icon {
+    width: 4.75rem;
+    height: 4.75rem;
+    border-radius: 13px;
+    margin-bottom: 2rem;
+}
+
+.contact-side h2 {
+    margin-bottom: 1.25rem;
+}
+
+.contact-side ul {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0 0 2rem;
+}
+
+.contact-side li {
+    margin: .65rem 0;
+    padding-left: .2rem;
+}
+
+.contact-side > .btn {
+    margin-top: auto;
+    min-height: 4.5rem;
+    width: 100%;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    box-shadow: 0 8px 22px rgba(37, 99, 235, .18);
+}
+
+.contact-side > .btn svg {
+    width: 1.55rem;
+    height: 1.55rem;
+}
+
+@media (max-width: 900px) {
+    .contact-info,
+    .contact-side {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-header {
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .contact-info,
+    .contact-side {
+        padding: 1.5rem;
+    }
+
+    .contact-brand img,
+    .contact-side .panel-icon {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    .contact-brand strong {
+        font-size: 1.05rem;
+    }
+
+    .contact-brand span,
+    .contact-list a,
+    .contact-side ul {
+        font-size: .88rem;
+    }
+
+    .contact-info h2,
+    .contact-side h2 {
+        font-size: 1.65rem;
+    }
+}
