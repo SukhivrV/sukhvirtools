@@ -49,3 +49,5 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 .contact-list li:nth-child(1) .contact-icon{background:var(--accent-soft);color:var(--accent)}
 .contact-list li:nth-child(2) .contact-icon{background:#0a66c2;color:#fff}
 .contact-list li:nth-child(3) .contact-icon{background:#111827;color:#fff}
+.contact-info,.contact-side{height:100%;box-sizing:border-box}
+.contact-side ul{margin-bottom:0}
