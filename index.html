@@ -1,186 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StructiFlow by Sukhvir - Revit Automation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="StructiFlow by Sukhvir is a Revit automation add-in for structural BIM teams. Automate numbering, splitting, documentation and coordination in Revit 2025 and above.">
+<meta name="author" content="Sukhvir Verma">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f172a">
+<meta property="og:title" content="StructiFlow by Sukhvir | Revit Automation">
+<meta property="og:description" content="Automate repetitive structural BIM tasks directly inside Autodesk Revit 2025 and above.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sukhivrv.github.io/sukhvirtools/">
+<meta property="og:image" content="https://sukhivrv.github.io/sukhvirtools/logo.png">
+<title>StructiFlow by Sukhvir | Revit Automation Add-in</title>
+<link rel="canonical" href="https://sukhivrv.github.io/sukhvirtools/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo"><img src="logo.png" alt="StructiFlow by Sukhvir" class="nav-logo-img">StructiFlow by Sukhvir</a>
-            <div class="nav-links">
-                <a href="index.html" class="active">About</a>
-                <a href="features.html">Features</a>
-                <a href="contact.html">Contact</a>
-                <a href="download.html" class="btn btn-primary nav-cta">Download</a>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <section class="hero">
-            <div class="hero-inner">
-                <span class="badge">Revit 2025 and above Add-in</span>
-                <h1>Structi<span class="gradient">Flow</span></h1>
-                <p class="tagline">Eliminate repetitive modeling tasks, auto-number elements, and generate sheets in seconds&mdash;built specifically for structural BIM champs.</p>
-                <div class="hero-actions">
-                    <a href="download.html" class="btn btn-primary">Get Started for Revit 2025 and above</a>
-                    <a href="features.html" class="btn btn-outline">Explore Features</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats-section">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value">13</div>
-                    <div class="stat-label">Structural automation tools</div>
-                    <div class="stat-note">Numbering, splitting, coordination, and documentation.</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">1 click</div>
-                    <div class="stat-label">Per automation task</div>
-                    <div class="stat-note">Every tool runs straight from the ribbon.</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">Revit 2025</div>
-                    <div class="stat-label">Native workflow</div>
-                    <div class="stat-note">Runs in the software your models live in.</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">0</div>
-                    <div class="stat-label">Extra software needed</div>
-                    <div class="stat-note">No scripts, Dynamo graphs, or side apps.</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="content-container">
-                <h2 class="section-title">See it in Revit</h2>
-                <p class="section-sub">A dedicated ribbon tab that puts your most-used structural tools one click away.</p>
-                <div class="ribbon-preview">
-                    <div class="ribbon-titlebar">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="title">Model - Structural.rvt &mdash; Autodesk Revit 2025</span>
-                    </div>
-                    <div class="ribbon-tabs">
-                        <span class="ribbon-tab">Structure</span>
-                        <span class="ribbon-tab active">Sukhvir Automation</span>
-                        <span class="ribbon-tab">Steel</span>
-                    </div>
-                    <div class="ribbon-panel">
-                        <span class="ribbon-panel-label">StructiFlow by Sukhvir</span>
-                        <div class="ribbon-buttons">
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/PileNumber.png" alt="">
-                                Pile Number
-                            </button>
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/ColumnNumber.png" alt="">
-                                Column Number
-                            </button>
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/WallNumber.png" alt="">
-                                Wall Number
-                            </button>
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/ColumnSplit.png" alt="">
-                                Column Split
-                            </button>
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/WallSplit.png" alt="">
-                                Wall Split
-                            </button>
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/JoinGeometry.png" alt="">
-                                Join Geometry
-                            </button>
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/ApplyCoping.png" alt="">
-                                Apply Coping
-                            </button>
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/CreateSheets.png" alt="">
-                                Create Sheets
-                            </button>
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/AssignViews.png" alt="">
-                                Assign Views
-                            </button>
-                            <button class="ribbon-btn" type="button">
-                                <img src="icons/AnnotationFixer.png" alt="">
-                                Annotation Fixer
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt">
-            <div class="content-container">
-                <h2 class="section-title">Why StructiFlow?</h2>
-                <p class="section-sub">Revit is powerful, but structural production work is full of repetitive, error-prone tasks that eat hours every week. StructiFlow removes the busywork&mdash;no scripting, no Dynamo graphs, just click and done.</p>
-
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon" data-lucide="hash"></div>
-                        <h3>Automates Numbering</h3>
-                        <p>Number piles, columns, beams, and walls intelligently&mdash;detecting stacks, rows, and orientation to assign sequential marks automatically.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon" data-lucide="scissors"></div>
-                        <h3>Splits Elements</h3>
-                        <p>Split columns and walls at any intermediate level with a single click, creating properly segmented elements with copied marks.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon" data-lucide="file-spreadsheet"></div>
-                        <h3>Streamlines Documentation</h3>
-                        <p>Batch-create sheets from Excel, assign views to sheets, and fix annotation overlaps&mdash;all from the ribbon.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon" data-lucide="drafting-compass"></div>
-                        <h3>Simplifies Coordination</h3>
-                        <p>Join geometry between selected categories, apply steel coping automatically, and extract pile coordinates with ease.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="content-container" style="text-align:center">
-                <h2 class="section-title">Compatibility</h2>
-                <p class="section-sub">One installer. One tab. Ready to work in your production models today.</p>
-                <p><strong>Autodesk Revit 2025 and above</strong> &middot; Windows 10/11 (64-bit) &middot; .NET 8.0</p>
-                <p style="margin-top:1.5rem">
-                    <a href="download.html" class="btn btn-primary" data-lucide="download">Download Installer</a>
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="index.html">About</a>
-                <a href="features.html">Features</a>
-                <a href="download.html">Download</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <p> Copyright &copy; Sukhvir Verma. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>lucide.createIcons();</script>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="navbar" aria-label="Primary navigation">
+<div class="nav-container">
+<a href="index.html" class="nav-logo" aria-label="StructiFlow by Sukhvir home"><img src="logo.png" alt="" class="nav-logo-img"><span>StructiFlow by Sukhvir</span></a>
+<div class="nav-links"><a href="index.html" class="active" aria-current="page">About</a><a href="features.html">Features</a><a href="contact.html">Contact</a><a href="download.html" class="btn btn-primary nav-cta">Download</a></div>
+</div>
+</nav>
+<main id="main-content">
+<section class="hero"><div class="hero-inner"><span class="badge"><span class="badge-dot" aria-hidden="true"></span> Revit 2025 and above Add-in</span><h1>Structi<span class="gradient">Flow</span></h1><p class="tagline">Eliminate repetitive modeling tasks, auto-number elements, and generate sheets in seconds&mdash;built specifically for structural BIM teams.</p><div class="hero-actions"><a href="download.html" class="btn btn-primary">Get Started for Revit 2025+</a><a href="features.html" class="btn btn-outline">Explore Features</a></div><div class="hero-trust"><span>✓ Native Revit workflow</span><span>✓ No Dynamo required</span><span>✓ Built for structural BIM</span></div></div></section>
+<section class="stats-section" aria-label="StructiFlow highlights"><div class="stats-grid"><div class="stat-card"><div class="stat-value">13</div><div class="stat-label">Structural automation tools</div><div class="stat-note">Numbering, splitting, coordination, and documentation.</div></div><div class="stat-card"><div class="stat-value">1 click</div><div class="stat-label">Per automation task</div><div class="stat-note">Designed to reduce repetitive production work.</div></div><div class="stat-card"><div class="stat-value">Revit 2025+</div><div class="stat-label">Native workflow</div><div class="stat-note">Works directly inside the Revit environment.</div></div><div class="stat-card"><div class="stat-value">No Dynamo</div><div class="stat-label">Required</div><div class="stat-note">No Dynamo graphs or pyRevit workflow required.</div></div></div></section>
+<section class="section" aria-labelledby="revit-preview-title"><div class="content-container"><div class="eyebrow">Built for production</div><h2 class="section-title" id="revit-preview-title">See it in Revit</h2><p class="section-sub">A dedicated automation experience that puts your most-used structural tools one click away.</p><div class="ribbon-preview"><div class="ribbon-titlebar"><span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span><span class="title">Model - Structural.rvt &mdash; Autodesk Revit 2025</span></div><div class="ribbon-tabs"><span class="ribbon-tab">Structure</span><span class="ribbon-tab active">Sukhvir Automation</span><span class="ribbon-tab">Steel</span></div><div class="ribbon-panel"><span class="ribbon-panel-label">StructiFlow by Sukhvir</span><div class="ribbon-buttons">
+<button class="ribbon-btn" type="button"><img src="icons/PileNumber.png" alt="Pile Number tool icon"><span>Pile Number</span></button><button class="ribbon-btn" type="button"><img src="icons/ColumnNumber.png" alt="Column Number tool icon"><span>Column Number</span></button><button class="ribbon-btn" type="button"><img src="icons/WallNumber.png" alt="Wall Number tool icon"><span>Wall Number</span></button><button class="ribbon-btn" type="button"><img src="icons/ColumnSplit.png" alt="Column Split tool icon"><span>Column Split</span></button><button class="ribbon-btn" type="button"><img src="icons/WallSplit.png" alt="Wall Split tool icon"><span>Wall Split</span></button><button class="ribbon-btn" type="button"><img src="icons/JoinGeometry.png" alt="Join Geometry tool icon"><span>Join Geometry</span></button><button class="ribbon-btn" type="button"><img src="icons/ApplyCoping.png" alt="Apply Coping tool icon"><span>Apply Coping</span></button><button class="ribbon-btn" type="button"><img src="icons/CreateSheets.png" alt="Create Sheets tool icon"><span>Create Sheets</span></button><button class="ribbon-btn" type="button"><img src="icons/AssignViews.png" alt="Assign Views tool icon"><span>Assign Views</span></button><button class="ribbon-btn" type="button"><img src="icons/AnnotationFixer.png" alt="Annotation Fixer tool icon"><span>Annotation Fixer</span></button>
+</div></div></div></div></section>
+<section class="section section-alt" aria-labelledby="why-title"><div class="content-container"><div class="eyebrow">Less clicking. More modelling.</div><h2 class="section-title" id="why-title">Why StructiFlow?</h2><p class="section-sub">Revit is powerful, but structural production work is full of repetitive, error-prone tasks. StructiFlow turns those tasks into simple, repeatable workflows.</p><div class="feature-grid"><div class="feature-card"><div class="feature-icon" data-lucide="hash" aria-hidden="true"></div><h3>Automates Numbering</h3><p>Number piles, columns, beams, and walls intelligently&mdash;detecting stacks, rows, and orientation to assign sequential marks.</p><a class="card-link" href="features.html">Explore numbering →</a></div><div class="feature-card"><div class="feature-icon" data-lucide="scissors" aria-hidden="true"></div><h3>Splits Elements</h3><p>Split columns and walls at an intermediate level with a single click, creating properly segmented elements.</p><a class="card-link" href="features.html">Explore splitting →</a></div><div class="feature-card"><div class="feature-icon" data-lucide="file-spreadsheet" aria-hidden="true"></div><h3>Streamlines Documentation</h3><p>Batch-create sheets from Excel, assign views to sheets, and fix annotation overlaps from the ribbon.</p><a class="card-link" href="features.html">Explore documentation →</a></div><div class="feature-card"><div class="feature-icon" data-lucide="drafting-compass" aria-hidden="true"></div><h3>Simplifies Coordination</h3><p>Join geometry, apply steel coping, and extract pile coordinates without leaving your Revit workflow.</p><a class="card-link" href="features.html">Explore coordination →</a></div></div></div></section>
+<section class="section compatibility-section" aria-labelledby="compatibility-title"><div class="content-container compatibility-card"><div><div class="eyebrow">Ready for your workflow</div><h2 class="section-title" id="compatibility-title">Compatibility</h2><p class="section-sub">One installer. One automation experience. Designed for structural production teams working in Revit.</p></div><div class="compatibility-list"><span><strong>Revit</strong> 2025 and above</span><span><strong>Windows</strong> 10/11 · 64-bit</span><span><strong>.NET</strong> 8.0</span></div><a href="download.html" class="btn btn-primary"><i data-lucide="download" aria-hidden="true"></i> Download Installer</a></div></section>
+</main>
+<footer><div class="footer-container"><div class="footer-brand"><img src="logo.png" alt="" class="footer-logo"><div><strong>StructiFlow by Sukhvir</strong><span>Revit automation for structural BIM.</span></div></div><div class="footer-links"><a href="index.html">About</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="contact.html">Contact</a></div><p>Copyright &copy; Sukhvir Verma. All rights reserved.</p></div></footer>
+<script src="https://unpkg.com/lucide@latest"></script><script>if(window.lucide)lucide.createIcons();</script>
 </body>
 </html>
