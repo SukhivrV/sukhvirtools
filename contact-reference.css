@@ -23,9 +23,22 @@
     display: none;
 }
 
+/* The reference uses a wide, spacious two-card composition. */
+.content {
+    width: 100%;
+    max-width: none;
+    padding: 0 3rem 5.5rem;
+}
+
+.content-container {
+    width: 100%;
+    max-width: none;
+}
+
 .contact-layout {
-    grid-template-columns: 1.2fr .8fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 1.5rem;
+    width: 100%;
 }
 
 .contact-info,
@@ -139,6 +152,11 @@
 }
 
 @media (max-width: 900px) {
+    .content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
     .contact-info,
     .contact-side {
         min-height: 0;
@@ -146,6 +164,11 @@
 }
 
 @media (max-width: 640px) {
+    .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .page-header {
         padding-top: 3rem;
         padding-bottom: 1.5rem;
