@@ -52,3 +52,4 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 .contact-side{flex:.8 1 260px;display:flex;flex-direction:column;justify-content:space-between;box-sizing:border-box}
 .contact-side ul{margin-bottom:0}
 @media (max-width:900px){.contact-layout{flex-direction:column}}
+.contact-layout .contact-info{margin:0}
