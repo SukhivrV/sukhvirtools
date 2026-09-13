@@ -39,3 +39,7 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 .explore-features-text p{color:var(--text-muted);margin:0 0 1.25rem}
 @media (max-width:900px){.tool-num-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.tool-num-grid{grid-template-columns:1fr}.tool-num-badge{top:1.25rem;right:1.25rem}.explore-features-cta{text-align:left}}
+.content-container .section-title{display:block;text-align:center}
+.contact-layout{align-items:stretch}
+.contact-info,.contact-side{display:flex;flex-direction:column}
+.contact-side{justify-content:space-between}
