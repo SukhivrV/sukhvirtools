@@ -79,13 +79,11 @@ a:hover {
     letter-spacing: -0.01em;
 }
 
-.nav-logo::before {
-    content: "";
-    width: 14px;
-    height: 14px;
+.nav-logo-img {
+    height: 28px;
+    width: auto;
+    display: block;
     border-radius: 4px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    box-shadow: 0 2px 8px var(--accent-soft);
 }
 
 .nav-logo:hover {
