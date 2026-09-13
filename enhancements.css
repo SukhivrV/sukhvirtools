@@ -43,3 +43,4 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 .contact-layout{align-items:stretch}
 .contact-info,.contact-side{display:flex;flex-direction:column}
 .contact-side{justify-content:space-between}
+#how-it-works,#contact{padding-top:3rem}
