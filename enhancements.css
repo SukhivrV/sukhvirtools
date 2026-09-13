@@ -40,14 +40,15 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 @media (max-width:900px){.tool-num-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.tool-num-grid{grid-template-columns:1fr}.tool-num-badge{top:1.25rem;right:1.25rem}.explore-features-cta{text-align:left}}
 .content-container .section-title{display:block;text-align:center}
-.contact-layout{align-items:stretch}
-.contact-info,.contact-side{display:flex;flex-direction:column}
-.contact-side{justify-content:space-between}
+
 #how-it-works,#contact{padding-top:3rem}
 .section-divider{display:block;width:46px;height:3px;margin:1rem auto 2.5rem;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:99px}
 .contact-icon,.panel-icon{width:48px;height:48px;border-radius:14px}
 .contact-list li:nth-child(1) .contact-icon{background:var(--accent-soft);color:var(--accent)}
 .contact-list li:nth-child(2) .contact-icon{background:#0a66c2;color:#fff}
 .contact-list li:nth-child(3) .contact-icon{background:#111827;color:#fff}
-.contact-info,.contact-side{height:100%;box-sizing:border-box}
+.contact-layout{display:flex;flex-wrap:wrap;align-items:stretch}
+.contact-info{flex:1.2 1 320px;display:flex;flex-direction:column;box-sizing:border-box}
+.contact-side{flex:.8 1 260px;display:flex;flex-direction:column;justify-content:space-between;box-sizing:border-box}
 .contact-side ul{margin-bottom:0}
+@media (max-width:900px){.contact-layout{flex-direction:column}}
