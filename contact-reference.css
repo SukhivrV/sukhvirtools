@@ -11,19 +11,31 @@
     line-height: 1.1;
     margin-bottom: .8rem;
     letter-spacing: -.035em;
+    color: #102858;
 }
 
 .page-header p {
     font-size: 1.15rem;
     max-width: 900px;
     margin: 0 auto;
+    color: #5877a8;
 }
 
 .page-header .eyebrow {
     display: none;
 }
 
-/* The reference uses a wide, spacious two-card composition. */
+.page-header::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 6px;
+    margin: 1rem auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+}
+
+/* Wide, spacious two-card composition from the reference. */
 .content {
     width: 100%;
     max-width: none;
@@ -46,7 +58,17 @@
     padding: 2.75rem;
     min-height: 38rem;
     border-color: #dbe7f7;
+    border-radius: 17px;
     box-shadow: 0 8px 28px rgba(15, 23, 42, .025);
+}
+
+.contact-info {
+    background: linear-gradient(135deg, #fff 0%, #fff 72%, #fbfdff 100%);
+}
+
+.contact-side {
+    background: linear-gradient(135deg, #fff 0%, #fff 70%, #fafdff 100%);
+    justify-content: flex-start;
 }
 
 .contact-brand {
@@ -63,11 +85,13 @@
 .contact-brand strong {
     font-size: 1.35rem;
     line-height: 1.25;
+    color: #102858;
 }
 
 .contact-brand span {
     font-size: 1rem;
     margin-top: .2rem;
+    color: #5b79a7;
 }
 
 .contact-info h2,
@@ -76,12 +100,14 @@
     line-height: 1.2;
     letter-spacing: -.025em;
     margin-bottom: .85rem;
+    color: #102858;
 }
 
 .contact-info > p {
     font-size: 1rem;
     line-height: 1.8;
     max-width: 720px;
+    color: #5d79a4;
 }
 
 .contact-list {
@@ -98,20 +124,23 @@
     height: 4rem;
     flex-basis: 4rem;
     border-radius: 13px;
-    background: rgba(37, 99, 235, .11);
+    background: #e9f2ff;
+    color: #1769e8;
 }
 
 .contact-list strong {
     font-size: .95rem;
     margin-bottom: .15rem;
+    color: #14284d;
 }
 
 .contact-list a {
     font-size: 1rem;
+    color: #1264e8;
 }
 
-.contact-side {
-    justify-content: flex-start;
+.contact-list a:hover {
+    color: #0d4fc0;
 }
 
 .contact-side .panel-icon {
@@ -119,6 +148,8 @@
     height: 4.75rem;
     border-radius: 13px;
     margin-bottom: 2rem;
+    background: #e9f2ff;
+    color: #1769e8;
 }
 
 .contact-side h2 {
@@ -129,6 +160,7 @@
     font-size: 1rem;
     line-height: 1.8;
     margin: 0 0 2rem;
+    color: #5d79a4;
 }
 
 .contact-side li {
