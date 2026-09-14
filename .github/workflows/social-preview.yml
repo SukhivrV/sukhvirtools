@@ -1,0 +1,93 @@
+name: Build social preview
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  social-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Pillow
+        run: python -m pip install pillow
+
+      - name: Generate Open Graph image and metadata
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageFont
+          import re
+
+          W, H = 1200, 630
+          canvas = Image.new('RGB', (W, H), '#f7fbff')
+          draw = ImageDraw.Draw(canvas)
+
+          # Soft blue background accents
+          for x in range(W):
+              t = x / (W - 1)
+              r = int(247 - 8 * t)
+              g = int(251 - 10 * t)
+              b = int(255 - 2 * t)
+              draw.line((x, 0, x, H), fill=(r, g, b))
+          draw.rounded_rectangle((55, 55, W-55, H-55), radius=34, outline='#dbeafe', width=3, fill='#ffffff')
+          draw.rounded_rectangle((55, 55, 70, H-55), radius=7, fill='#2563eb')
+
+          logo_path = Path('logo.png')
+          if logo_path.exists():
+              logo = Image.open(logo_path).convert('RGBA')
+              max_h = 230
+              scale = min(max_h / logo.height, 1.0)
+              logo = logo.resize((int(logo.width * scale), int(logo.height * scale)), Image.Resampling.LANCZOS)
+              canvas.paste(logo, (120, (H - logo.height)//2), logo)
+
+          def font(size, bold=False):
+              candidates = [
+                  '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf' if bold else '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',
+                  '/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf' if bold else '/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf'
+              ]
+              for p in candidates:
+                  if Path(p).exists():
+                      return ImageFont.truetype(p, size)
+              return ImageFont.load_default()
+
+          draw.text((330, 175), 'StructiFlow', font=font(72, True), fill='#102858')
+          draw.text((333, 260), 'by Sukhvir', font=font(34, True), fill='#2563eb')
+          draw.text((333, 330), 'Structural BIM automation for Autodesk Revit', font=font(30), fill='#5877a8')
+          draw.rounded_rectangle((333, 405, 770, 462), radius=28, fill='#eaf3ff')
+          draw.text((360, 417), 'Revit 2025 and above  •  No Dynamo required', font=font(22, True), fill='#1769e8')
+          draw.text((333, 510), 'Automate repetitive modelling, documentation and coordination tasks.', font=font(22), fill='#64748b')
+
+          canvas.save('og-image.png', 'PNG', optimize=True)
+
+          path = Path('index.html')
+          html = path.read_text(encoding='utf-8')
+          html = re.sub(r'<meta property="og:image"[^>]*>', '<meta property="og:image" content="https://sukhivrv.github.io/sukhvirtools/og-image.png?v=20260914">', html)
+          additions = '''\n<meta property="og:site_name" content="StructiFlow by Sukhvir">\n<meta property="og:locale" content="en_US">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:type" content="image/png">\n<meta property="og:image:alt" content="StructiFlow by Sukhvir - Structural BIM automation for Autodesk Revit">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="StructiFlow by Sukhvir | Revit Automation">\n<meta name="twitter:description" content="Automate repetitive structural BIM tasks directly inside Autodesk Revit 2025 and above.">\n<meta name="twitter:image" content="https://sukhivrv.github.io/sukhvirtools/og-image.png?v=20260914">\n'''
+          if 'property="og:site_name"' not in html:
+              html = html.replace('</head>', additions + '</head>')
+          path.write_text(html, encoding='utf-8')
+          PY
+
+      - name: Commit generated preview
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add og-image.png index.html
+          if git diff --cached --quiet; then
+            echo 'No social preview changes to commit.'
+          else
+            git commit -m 'Fix WhatsApp and social link preview'
+            git push
+          fi
