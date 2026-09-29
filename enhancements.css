@@ -1,4 +1,4 @@
-/* Strux visual/accessibility enhancements. Loaded after styles.css. */
+/* StruX visual/accessibility enhancements. Loaded after styles.css. */
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 .skip-link{position:fixed;left:1rem;top:-4rem;z-index:1000;padding:.65rem 1rem;background:#0f172a;color:#fff;border-radius:8px;font-weight:700;transition:top .2s ease}.skip-link:focus{top:1rem;color:#fff}
 .nav-logo-img{height:34px;width:34px;object-fit:contain;border-radius:8px;box-shadow:0 3px 12px rgba(37,99,235,.16)}.nav-logo{gap:.65rem}.nav-logo span{white-space:nowrap}.nav-links a[data-section]{position:relative}.nav-links a[data-section]::after{content:"";position:absolute;left:0;right:0;bottom:-.45rem;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:99px;transform:scaleX(0);transform-origin:center;transition:transform .2s ease}.nav-links a[data-section].active::after,.nav-links a[data-section]:hover::after{transform:scaleX(1)}
