@@ -53,3 +53,5 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 .contact-side ul{margin-bottom:0}
 @media (max-width:900px){.contact-layout{flex-direction:column}}
 .contact-layout .contact-info{margin:0}
+
+.hero-byline{display:block;margin-top:.22em;font-size:.34em;font-weight:700;letter-spacing:.08em;color:#cbd5e1;line-height:1.2}
