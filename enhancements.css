@@ -54,4 +54,4 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 @media (max-width:900px){.contact-layout{flex-direction:column}}
 .contact-layout .contact-info{margin:0}
 
-.hero-byline{display:block;margin-top:.22em;font-size:.34em;font-weight:700;letter-spacing:.08em;color:#cbd5e1;line-height:1.2}
+.hero-byline{display:inline-block;font-size:.54em;font-weight:700;letter-spacing:-.02em;color:#cbd5e1;line-height:1.2;white-space:nowrap;vertical-align:.12em}
