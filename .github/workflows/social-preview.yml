@@ -62,19 +62,19 @@ jobs:
                       return ImageFont.truetype(p, size)
               return ImageFont.load_default()
 
-          draw.text((330, 175), 'StruX', font=font(72, True), fill='#102858')
-          draw.text((333, 260), 'by Sukhvir', font=font(34, True), fill='#2563eb')
-          draw.text((333, 330), 'Structural BIM automation for Autodesk Revit', font=font(30), fill='#5877a8')
-          draw.rounded_rectangle((333, 405, 770, 462), radius=28, fill='#eaf3ff')
-          draw.text((360, 417), 'Revit 2025 and above  •  No Dynamo required', font=font(22, True), fill='#1769e8')
-          draw.text((333, 510), 'Automate repetitive modelling, documentation and coordination tasks.', font=font(22), fill='#64748b')
+          draw.text((330, 175), 'Sukhvir BIM Suite', font=font(58, True), fill='#102858')
+          draw.text((333, 260), 'Structural BIM automation for Revit', font=font(32, True), fill='#2563eb')
+          draw.text((333, 330), '18 productivity tools across six focused ribbon panels', font=font(28), fill='#5877a8')
+          draw.rounded_rectangle((333, 405, 920, 462), radius=28, fill='#eaf3ff')
+          draw.text((360, 417), 'Revit 2025+  •  18 tools  •  pyRevit extension', font=font(22, True), fill='#1769e8')
+          draw.text((333, 510), 'Numbering, model modification, pile checks, sheets and schedules.', font=font(22), fill='#64748b')
 
           canvas.save('og-image.png', 'PNG', optimize=True)
 
           path = Path('index.html')
           html = path.read_text(encoding='utf-8')
-          html = re.sub(r'<meta property="og:image"[^>]*>', '<meta property="og:image" content="https://sukhivrv.github.io/sukhvirtools/og-image.png?v=20260929">', html)
-          additions = '''\n<meta property="og:site_name" content="StruX by Sukhvir">\n<meta property="og:locale" content="en_US">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:type" content="image/png">\n<meta property="og:image:alt" content="StruX by Sukhvir - Structural BIM automation for Autodesk Revit">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="StruX by Sukhvir | Revit Automation">\n<meta name="twitter:description" content="Automate repetitive structural BIM tasks directly inside Autodesk Revit 2025 and above.">\n<meta name="twitter:image" content="https://sukhivrv.github.io/sukhvirtools/og-image.png?v=20260929">\n'''
+          html = re.sub(r'<meta property="og:image"[^>]*>', '<meta property="og:image" content="https://sukhivrv.github.io/sukhvirtools/og-image.png?v=20261112">', html)
+          additions = '''\n<meta property="og:site_name" content="Sukhvir BIM Suite">\n<meta property="og:locale" content="en_US">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:type" content="image/png">\n<meta property="og:image:alt" content="Sukhvir BIM Suite - Revit productivity tools for structural BIM">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="Sukhvir BIM Suite | Revit Productivity Tools">\n<meta name="twitter:description" content="18 focused pyRevit tools for structural modelling, documentation, coordination and quality checks inside Autodesk Revit 2025 and above.">\n<meta name="twitter:image" content="https://sukhivrv.github.io/sukhvirtools/og-image.png?v=20261112">\n'''
           if 'property="og:site_name"' not in html:
               html = html.replace('</head>', additions + '</head>')
           path.write_text(html, encoding='utf-8')
