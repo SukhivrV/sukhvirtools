@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "product": "Sukhvir BIM Suite",
+  "website": "https://sukhivrv.github.io/sukhvirtools/",
+  "updatedAt": "2026-11-16",
+  "compatibility": {
+    "revit": "2025+",
+    "platform": "Windows 10/11 64-bit",
+    "extension": "pyRevit"
+  },
+  "release": {
+    "version": "1.0",
+    "status": "coming_soon",
+    "downloadUrl": null,
+    "notesUrl": "https://sukhivrv.github.io/sukhvirtools/"
+  },
+  "categories": [
+    "Annotations & Sheets",
+    "Model Modification",
+    "Beam Tools",
+    "Column Tools",
+    "Pile Tools",
+    "Wall Tools"
+  ],
+  "tools": [
+    {
+      "id": 1,
+      "name": "Create Sheets",
+      "category": "Annotations & Sheets",
+      "description": "Create sheets from an Excel register, including title block, drawing category and series parameters.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 2,
+      "name": "Assign Views on Sheets",
+      "category": "Annotations & Sheets",
+      "description": "Place views on selected sheets with typed offsets or picked calibration points.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 3,
+      "name": "Export Drawings",
+      "category": "Annotations & Sheets",
+      "description": "Export sheets, print sets or revisions to PDF, DWG or DWF with custom file naming.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 4,
+      "name": "Export & Import Schedules",
+      "category": "Annotations & Sheets",
+      "description": "Round-trip schedule data through Excel, matching rows by element GUID.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 5,
+      "name": "Annotation Fixer",
+      "category": "Annotations & Sheets",
+      "description": "Check selected sheets for annotations outside the title block and align issues to a reference.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 6,
+      "name": "Element History",
+      "category": "Annotations & Sheets",
+      "description": "Log added and modified elements, or inspect the recorded history of selected elements.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 7,
+      "name": "Apply Coping",
+      "category": "Model Modification",
+      "description": "Find intersecting bracing members and apply coping, with optional columns as cutting members.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 8,
+      "name": "Join Geometry",
+      "category": "Model Modification",
+      "description": "Join elements between two chosen categories in the active view, with optional cut priority.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 9,
+      "name": "Concrete Beam Number",
+      "category": "Beam Tools",
+      "description": "Number in-situ concrete beams in plan order—horizontal first, then vertical—and write to Mark.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 10,
+      "name": "Steel Beam Number",
+      "category": "Beam Tools",
+      "description": "Number hot-rolled steel beams in the same plan order and add an SB prefix to Mark.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 11,
+      "name": "Beam Coordinates",
+      "category": "Beam Tools",
+      "description": "Write beam start, end and centre X/Y values in survey-point coordinates.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 12,
+      "name": "Column Number",
+      "category": "Column Tools",
+      "description": "Group columns into vertical runs and assign one mark per run, with C, TC or FC prefixes.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 13,
+      "name": "Column Split",
+      "category": "Column Tools",
+      "description": "Split columns at chosen levels while keeping the original mark and zero base/top offsets.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 14,
+      "name": "Pile Coordinates",
+      "category": "Pile Tools",
+      "description": "Write pile coordinates transformed from Revit internal coordinates to survey-point coordinates.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 15,
+      "name": "Pile Number",
+      "category": "Pile Tools",
+      "description": "Number piles by prefix, start number, family filter and chosen numbering direction.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 16,
+      "name": "Pile Spacing",
+      "category": "Pile Tools",
+      "description": "Check round-pipe piles against a minimum centre spacing based on a factor of pile diameter.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 17,
+      "name": "Wall Number",
+      "category": "Wall Tools",
+      "description": "Number selected walls by plan position and write the result to Mark, with W, TW, RW or WT prefixes.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    },
+    {
+      "id": 18,
+      "name": "Wall Split",
+      "category": "Wall Tools",
+      "description": "Split walls at chosen levels while keeping the original mark and zero base/top offsets.",
+      "availability": "documentation",
+      "detailUrl": "https://sukhivrv.github.io/sukhvirtools/features.html"
+    }
+  ]
+}
